@@ -1,8 +1,10 @@
 # Content Calendar - Spring Course
 
-https://www.youtube.com/watch?v=UgX5lgv4uVM
+Just practising with the tutorial below
 
 ![image-20250202174832939](README.assets/image-20250202174832939.png)
+
+[Spring Boot Tutorial for Beginners - Crash Course using Spring Boot 3](https://www.youtube.com/watch?v=UgX5lgv4uVM)
 
 # Notes 
 
