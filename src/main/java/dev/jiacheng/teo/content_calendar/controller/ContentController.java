@@ -2,9 +2,10 @@ package dev.jiacheng.teo.content_calendar.controller;
 
 import dev.jiacheng.teo.content_calendar.model.Content;
 import dev.jiacheng.teo.content_calendar.repository.ContentCollectionRepository;
-import jakarta.annotation.PostConstruct;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,6 +21,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/content")
+@CrossOrigin
 public class ContentController {
 
 
@@ -31,7 +33,7 @@ public class ContentController {
 	}
 
 	// make a request to final all the pieces of content in the system
-	@RequestMapping("/all")
+	@RequestMapping("")
 	public List<Content> findAll() {
 		return repository.findAll();
 	}
@@ -45,7 +47,7 @@ public class ContentController {
 
 	@ResponseStatus(HttpStatus.CREATED)
 	@PostMapping("")
-	public Content create(@RequestBody Content content) {
+	public Content create(@Valid @RequestBody Content content) {
 		return repository.save(content);
 	}
 

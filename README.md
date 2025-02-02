@@ -6,6 +6,14 @@ Just practising with the tutorial below
 
 [Spring Boot Tutorial for Beginners - Crash Course using Spring Boot 3](https://www.youtube.com/watch?v=UgX5lgv4uVM)
 
+# Important Concepts
+
+- Application Context
+- CRUD
+- HttpStatus
+- Enum
+- Spring Validation @NotBlank constraint
+
 # Notes 
 
 - Spring Boot 3
