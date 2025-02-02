@@ -1,0 +1,68 @@
+###
+// @no-log
+GET http://localhost:8080/welcome
+
+###
+// @no-log
+GET http://localhost:8080/api/content/all
+
+[
+  {
+    "id": 1,
+    "title": "First Content",
+    "desc": "First Content Description",
+    "status": "PUBLISHED",
+    "contentType": "ARTICLE",
+    "dateCreated": "2025-02-02T20:37:18.3837128",
+    "dateUpdated": null,
+    "url": ""
+  }
+]
+
+
+###
+// @no-log
+GET http://localhost:8080/api/content/2
+
+{
+  "id": 1,
+  "title": "First Content",
+  "desc": "First Content Description",
+  "status": "PUBLISHED",
+  "contentType": "ARTICLE",
+  "dateCreated": "2025-02-02T20:37:18.3837128",
+  "dateUpdated": null,
+  "url": ""
+}
+
+###
+// @no-log
+POST http://localhost:8080/api/content
+Content-Type: application/json
+
+{
+  "id": 2,
+  "title": "2 Content",
+  "desc": "2 Content Description",
+  "status": "PUBLISHED",
+  "contentType": "ARTICLE",
+  "dateCreated": "2025-02-02T20:37:18.3837128",
+  "dateUpdated": null,
+  "url": ""
+}
+
+###
+// @no-log
+PUT http://localhost:8080/api/content/2
+Content-Type: application/json
+
+{
+  "id": 2,
+  "title": "2 Content",
+  "desc": "2 Content UPDATED",
+  "status": "PUBLISHED",
+  "contentType": "ARTICLE",
+  "dateCreated": "2025-02-02T20:37:18.3837128",
+  "dateUpdated": null,
+  "url": ""
+}
