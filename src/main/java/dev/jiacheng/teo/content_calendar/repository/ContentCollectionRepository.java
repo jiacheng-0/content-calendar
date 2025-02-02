@@ -43,7 +43,12 @@ public class ContentCollectionRepository {
 	}
 
 	public Content save(Content content) {
+		contentList.removeIf(c -> c.id().equals(content.id()));
 		this.contentList.add(content);
 		return content;
+	}
+
+	public boolean existsById(Integer id) {
+		return contentList.stream().filter(c -> c.id().equals(id)).count() == 1;
 	}
 }
